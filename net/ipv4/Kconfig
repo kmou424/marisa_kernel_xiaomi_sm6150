@@ -492,7 +492,7 @@ config TCP_CONG_BIC
 
 config TCP_CONG_CUBIC
 	tristate "CUBIC TCP"
-	default m
+	default y
 	---help---
 	This is version 2.0 of BIC-TCP which uses a cubic growth function
 	among other techniques.
@@ -500,7 +500,7 @@ config TCP_CONG_CUBIC
 
 config TCP_CONG_WESTWOOD
 	tristate "TCP Westwood+"
-	default y
+	default m
 	---help---
 	TCP Westwood+ is a sender-side only modification of the TCP Reno
 	protocol stack that optimizes the performance of TCP congestion
@@ -662,7 +662,7 @@ config TCP_CONG_CDG
 
 config TCP_CONG_BBR
 	tristate "BBR TCP"
-	default y
+	default n
 	---help---
 
 	BBR (Bottleneck Bandwidth and RTT) TCP congestion control aims to
@@ -677,7 +677,7 @@ config TCP_CONG_BBR
 
 config TCP_CONG_AGILESD
         tristate "Agile-SD Congestion control"
-        default y
+        default n
         ---help---
         
         This is version 1.0 of Agile-SD TCP. It is a sender-side only. 
@@ -688,7 +688,7 @@ config TCP_CONG_AGILESD
 
 choice
 	prompt "Default TCP congestion control"
-	default DEFAULT_BBR
+	default DEFAULT_CUBIC
 	help
 	  Select the TCP congestion control that will be used by default
 	  for all connections.
