@@ -697,7 +697,7 @@ config TCP_CONG_AGILESD
 
 choice
 	prompt "Default TCP congestion control"
-	default DEFAULT_CUBIC
+	default DEFAULT_BBRPLUS
 	help
 	  Select the TCP congestion control that will be used by default
 	  for all connections.
